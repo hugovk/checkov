@@ -1,5 +1,6 @@
 name: security
 
+if: github.repository_owner == 'hugovk'
 on:
   pull_request:
     branches:
