@@ -230,7 +230,7 @@ jobs:
           echo "::set-output name=version::$checkov_version"
           echo "::set-output name=major_version::$checkov_major_version"
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: bridgecrew/checkov
           username: ${{ secrets.DOCKERHUB_USERNAME }}
@@ -251,7 +251,7 @@ jobs:
           echo "::set-output name=major_version::$checkov_major_version"
         id: versions
       - name: Publish to Registry
-        uses: elgohr/Publish-Docker-Github-Action@master
+        uses: elgohr/Publish-Docker-Github-Action@v5
         with:
           name: bridgecrew/checkov-k8s
           username: ${{ secrets.DOCKERHUB_USERNAME }}
